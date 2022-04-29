@@ -1,8 +1,8 @@
-# Codecademy-Medical-Insurance-Data---Cummulative-Project
+# Medical Insurance Data - Python Cummulative Project
 
 import csv
 
-# Importing dataset from the CSV file provided and saving particular pieces of data into separate lists.
+# Importing dataset from the CSV file and saving particular pieces of data into separate lists.
 
 age_lst = []
 sex_lst = []
@@ -87,10 +87,8 @@ The majority of people come from {region}. {population} people live there. \n"""
 print(get_most_repr_region(regions_data))
 
 # The function defined below creates a dictionary which takes two lists of data, zippes them and returns as a dictionary. 
-# The recurrent (non-unique) items from list1 are presented jointly as keys in the dictionary and values are represented by lists
-# which contain corresponding items from list2. 
-# The dictionary serves comparison purposes, e.g. allows to compare the medical insurance charges of smokers and non-smokers 
-# or ages of people who have a particular number of children or do not have any children at all. 
+# The recurrent (non-unique) items from list1 are presented jointly as keys in the dictionary and values are represented by lists which contain corresponding items from list2. 
+# The dictionary serves comparison purposes, e.g. allows to compare the medical insurance charges of smokers and non-smokers or ages of people who have a particular number of children or do not have any children at all. 
 
 def get_comparison_dict2(list1, list2):
     new_dict = {}
@@ -117,8 +115,7 @@ def present_averages(comparison_dict):
         new_dict.update({key: average})
     return new_dict
 
-# Utilising the function above (present_averages) to create the dictionary presenting average values
-# for the two different categories: smokers and non-smokers.
+# Utilising the function above (present_averages) to create the dictionary presenting average values for the two different categories: smokers and non-smokers.
 # Next, the difference in these averages is calculated. 
 
 smoker_average_charges = present_averages(smoker_to_charges)
@@ -127,8 +124,7 @@ print("The following data presents the average charges of smokers and non-smoker
 smoker_diff_average_charges = abs(smoker_average_charges["yes"] - smoker_average_charges["no"])
 print("Smokers pay on average approx.", int(smoker_diff_average_charges), "dollars more than non-smokers for their medical insurance.")
 
-# Utilising the function "present_averages" to create the dictionary presenting average ages of people 
-# with a different number of children
+# Utilising the function "present_averages" to create the dictionary presenting average ages of people with a different number of children
 
 print("""
 As stated above, the average age of this population is """ + str(average_age) + """.""")
